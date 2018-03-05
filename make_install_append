@@ -1,0 +1,3 @@
+pushd %{buildroot}/usr/bin
+ln -sf xml xmlstarlet
+popd

@@ -4,7 +4,7 @@
 #
 Name     : xmlstarlet
 Version  : 1.6.1
-Release  : 1
+Release  : 2
 URL      : https://sourceforge.net/projects/xmlstar/files/xmlstarlet/1.6.1/xmlstarlet-1.6.1.tar.gz
 Source0  : https://sourceforge.net/projects/xmlstar/files/xmlstarlet/1.6.1/xmlstarlet-1.6.1.tar.gz
 Summary  : No detailed summary available
@@ -46,7 +46,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1520277408
+export SOURCE_DATE_EPOCH=1520290319
 %configure --disable-static --with-libxml-include-prefix=/usr/include/libxml2
 make  %{?_smp_mflags}
 
@@ -58,9 +58,14 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1520277408
+export SOURCE_DATE_EPOCH=1520290319
 rm -rf %{buildroot}
 %make_install
+## make_install_append content
+pushd %{buildroot}/usr/bin
+ln -sf xml xmlstarlet
+popd
+## make_install_append end
 
 %files
 %defattr(-,root,root,-)
@@ -68,6 +73,7 @@ rm -rf %{buildroot}
 %files bin
 %defattr(-,root,root,-)
 /usr/bin/xml
+/usr/bin/xmlstarlet
 
 %files doc
 %defattr(-,root,root,-)
