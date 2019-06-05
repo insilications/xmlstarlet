@@ -4,7 +4,7 @@
 #
 Name     : xmlstarlet
 Version  : 1.6.1
-Release  : 3
+Release  : 4
 URL      : https://sourceforge.net/projects/xmlstar/files/xmlstarlet/1.6.1/xmlstarlet-1.6.1.tar.gz
 Source0  : https://sourceforge.net/projects/xmlstar/files/xmlstarlet/1.6.1/xmlstarlet-1.6.1.tar.gz
 Summary  : No detailed summary available
