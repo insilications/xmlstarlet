@@ -1,16 +1,16 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
+findutils
+libgcrypt-dev
 libxml2-dev
 libxml2-staticdev
-zlib-dev
-zlib-staticdev
+libxslt
+libxslt-dev
+libxslt-staticdev
+python3-dev
+python3-staticdev
 xz
 xz-dev
 xz-staticdev
-libxslt-dev
-libxslt-staticdev
-libgcrypt-dev
-libxslt
-python3-dev
-python3-staticdev
-findutils
+zlib-dev
+zlib-staticdev

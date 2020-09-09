@@ -1,5 +1,5 @@
 PKG_NAME := xmlstarlet
-URL = https://sourceforge.net/projects/xmlstar/files/xmlstarlet/1.6.1/xmlstarlet-1.6.1.tar.gz
+URL = https://git.code.sf.net/p/xmlstar/code
 ARCHIVES = 
 
 include ../common/Makefile.common
